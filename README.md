@@ -55,13 +55,13 @@ php artisan key:generate
 5. Then compile all CSS & JS files together using this command
 
 ```sh
-npm install && npm run dev
+npm install && npm run build
 ```
 
 or
 
 ```sh
-yarn install && yarn dev
+yarn install && yarn build
 ```
 6. Create a database in MYSQL and update in .env file.
 
@@ -92,8 +92,18 @@ Next, you will have data for admin to login system and fake records of staff.
     Password -> admin@2023
 ```
 
-Finally, we just run our project using this command 
+Finally, we just run our project using this command, and open the link http://127.0.0.1:8000/ 
 
 ```sh
 php artisan serve 
+
+Server running on [http://127.0.0.1:8000].  
+
 ```
+
+
+## References Resource Guide
+
+1. [Laravel 10](https://laravel.com/docs/10.x)
+2. [techvblogs - How to Install Bootstrap 5 in Laravel 9 With Vite](https://techvblogs.com/blog/how-to-install-bootstrap-5-in-laravel-9-with-vite)
+3. [Faker Php](https://fakerphp.github.io)

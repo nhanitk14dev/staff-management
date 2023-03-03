@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('staff', StaffController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
