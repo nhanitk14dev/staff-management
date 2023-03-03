@@ -21,46 +21,79 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## About Staff Management
+### Requirement
+- Laravel 10.0
+- PHP >= 8.1
+- Mysql >= 5.7
+- DB: staff_management_laravel
+- Bootstrap 4.6
+- Node >= 14
+## Getting Started Step by Step
+1. Clone source from my repository https://github.com/nhanitk14dev/staff-management
+2. Open terminal (bash/cmd). Then go to project folder using command
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```sh
+cd staff-management
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. User [Composer](https://getcomposer.org/download/) to install the required files and packages.
 
-## Laravel Sponsors
+```sh
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. Copy a .env file from example and generate key 
 
-### Premium Partners
+```sh
+cp .env.example .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+php artisan key:generate
+```
 
-## Contributing
+5. Then compile all CSS & JS files together using this command
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```sh
+npm install && npm run dev
+```
 
-## Code of Conduct
+or
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```sh
+yarn install && yarn dev
+```
+6. Create a database in MYSQL and update in .env file.
 
-## Security Vulnerabilities
+```
+  DB_DATABASE=staff_management_laravel
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. After connecting the db with project, then run command 
 
-## License
+```sh
+php artisan migrate:fresh --seed
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Then, System will run table migration and insert fake data by seeder.
+
+StaffSeeder will ask you how many fake data of staff will be created, default is 50 records.
+
+```
+How many "staff" seeds would you like to create? [50]:
+
+```
+
+Next, you will have data for admin to login system and fake records of staff.
+
+```
+    UserName -> Admin 
+    Email -> admin@gmail.com 
+    Password -> admin@2023
+```
+
+Finally, we just run our project using this command 
+
+```sh
+php artisan serve 
+```
