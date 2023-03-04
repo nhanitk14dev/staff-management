@@ -28,7 +28,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - PHP >= 8.1
 - Mysql >= 5.7
 - DB: staff_management_laravel
-- Bootstrap 4.6
+- Bootstrap 5.3
 - Node >= 14
 ## Getting Started Step by Step
 1. Clone source from my repository https://github.com/nhanitk14dev/staff-management
@@ -107,3 +107,4 @@ Server running on [http://127.0.0.1:8000].
 1. [Laravel 10](https://laravel.com/docs/10.x)
 2. [techvblogs - How to Install Bootstrap 5 in Laravel 9 With Vite](https://techvblogs.com/blog/how-to-install-bootstrap-5-in-laravel-9-with-vite)
 3. [Faker Php](https://fakerphp.github.io)
+4. [Datepicker in Laravel 9 with Bootstrap 5](https://larainfo.com/blogs/how-to-use-datepicker-in-laravel-9-with-bootstrap-5)
